@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caliburn.Metro.Sample", "Caliburn.Metro.Sample\Caliburn.Metro.Sample.csproj", "{225AD6A4-1F18-443A-A1CD-CF7FB17F2F8D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caliburn.Metro", "Caliburn.Metro\Caliburn.Metro.csproj", "{88F9EE49-E99F-4DFD-9B7B-4C52FAD007BB}"
@@ -30,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuget Package", "Nuget Pack
 		Caliburn.Metro.Autofac\Caliburn.Metro.Autofac.nuspec = Caliburn.Metro.Autofac\Caliburn.Metro.Autofac.nuspec
 		Caliburn.Metro\Caliburn.Metro.nuspec = Caliburn.Metro\Caliburn.Metro.nuspec
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caliburn.Micro.ReactiveUI", "Caliburn.Micro.ReactiveUI\Caliburn.Micro.ReactiveUI.csproj", "{39E149C2-0DE8-4E53-B0C3-A48CCE826584}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,14 +95,24 @@ Global
 		{3E257C20-B95A-40C5-881E-9F3D834CCB4E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3E257C20-B95A-40C5-881E-9F3D834CCB4E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3E257C20-B95A-40C5-881E-9F3D834CCB4E}.Release|x86.ActiveCfg = Release|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{39E149C2-0DE8-4E53-B0C3-A48CCE826584}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{52219DF7-F416-4818-A031-16914AB506CE} = {ED8CA7FD-FCE1-4400-8EA9-17073F0A1D96}
-		{7ADF6CD1-1CD7-4707-8BDA-0DDEC2B606F6} = {ED8CA7FD-FCE1-4400-8EA9-17073F0A1D96}
 		{225AD6A4-1F18-443A-A1CD-CF7FB17F2F8D} = {52219DF7-F416-4818-A031-16914AB506CE}
 		{1614EC90-BB1D-4DCD-8494-575D4FA29197} = {52219DF7-F416-4818-A031-16914AB506CE}
+		{52219DF7-F416-4818-A031-16914AB506CE} = {ED8CA7FD-FCE1-4400-8EA9-17073F0A1D96}
+		{7ADF6CD1-1CD7-4707-8BDA-0DDEC2B606F6} = {ED8CA7FD-FCE1-4400-8EA9-17073F0A1D96}
 	EndGlobalSection
 EndGlobal

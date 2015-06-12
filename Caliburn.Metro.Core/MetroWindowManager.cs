@@ -9,7 +9,7 @@ namespace Caliburn.Metro.Core
     [Export(typeof(IWindowManager))]
     public class MetroWindowManager : WindowManager
     {
-        private ResourceDictionary[] _resourceDictionaries;
+        private ResourceDictionary[] resourceDictionaries;
 
         protected override Window EnsureWindow(object model, object view, bool isDialog)
         {
@@ -48,8 +48,8 @@ namespace Caliburn.Metro.Core
 
         public virtual void ConfigureWindow(MetroWindow window)
         {
-
         }
+
         public virtual MetroWindow CreateCustomWindow(object view, bool windowIsView)
         {
             MetroWindow result;
@@ -71,61 +71,60 @@ namespace Caliburn.Metro.Core
 
         private void AddMetroResources(MetroWindow window)
         {
-            _resourceDictionaries = LoadResources();
-            foreach (ResourceDictionary dictionary in _resourceDictionaries)
+            resourceDictionaries = LoadResources();
+            foreach (var dictionary in resourceDictionaries)
             {
                 window.Resources.MergedDictionaries.Add(dictionary);
             }
         }
 
-        private ResourceDictionary[] LoadResources()
+        private static ResourceDictionary[] LoadResources()
         {
             return new[]
-                       {
-                           new ResourceDictionary
-                               {
-                                   Source =
-                                       new Uri(
-                                       "pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml",
-                                       UriKind.RelativeOrAbsolute)
-                               },
-                           new ResourceDictionary
-                               {
-                                   Source =
-                                       new Uri(
-                                       "pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml",
-                                       UriKind.RelativeOrAbsolute)
-                               },
-                           new ResourceDictionary
-                               {
-                                   Source =
-                                       new Uri(
-                                       "pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml",
-                                       UriKind.RelativeOrAbsolute)
-                               },
-                           new ResourceDictionary
-                               {
-                                   Source =
-                                       new Uri(
-                                       "pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml",
-                                       UriKind.RelativeOrAbsolute)
-                               },
-                           new ResourceDictionary
-                               {
-                                   Source =
-                                       new Uri(
-                                       "pack://application:,,,/Caliburn.Metro.Core;component/Resources/Icons.xaml",
-                                       UriKind.RelativeOrAbsolute)
-                               },
-                           new ResourceDictionary
-                               {
-                                   Source =
-                                       new Uri(
-                                       "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml",
-                                       UriKind.RelativeOrAbsolute)
-                               }
-
-                       };
+            {
+                new ResourceDictionary
+                {
+                    Source =
+                        new Uri(
+                            "pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml",
+                            UriKind.RelativeOrAbsolute)
+                },
+                new ResourceDictionary
+                {
+                    Source =
+                        new Uri(
+                            "pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml",
+                            UriKind.RelativeOrAbsolute)
+                },
+                new ResourceDictionary
+                {
+                    Source =
+                        new Uri(
+                            "pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml",
+                            UriKind.RelativeOrAbsolute)
+                },
+                new ResourceDictionary
+                {
+                    Source =
+                        new Uri(
+                            "pack://application:,,,/MahApps.Metro;component/Styles/Controls.AnimatedSingleRowTabControl.xaml",
+                            UriKind.RelativeOrAbsolute)
+                },
+                new ResourceDictionary
+                {
+                    Source =
+                        new Uri(
+                            "pack://application:,,,/Caliburn.Metro.Core;component/Resources/Icons.xaml",
+                            UriKind.RelativeOrAbsolute)
+                },
+                new ResourceDictionary
+                {
+                    Source = 
+                        new Uri(
+                            "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml",
+                            UriKind.RelativeOrAbsolute)
+                }
+            };
         }
     }
 }
