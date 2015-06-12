@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Caliburn.Micro;
 
-namespace Caliburn.Micro.ReactiveUI
+namespace Caliburn.ReactiveUI
 {
     /// <summary>
     /// An implementation of <see cref="IConductor"/> that holds on to and activates only one item at a time.

@@ -135,9 +135,9 @@
       <Project>{a78dcccf-01cd-48ce-8e85-ce262aa7e98f}</Project>
       <Name>Caliburn.Metro.Autofac</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Caliburn.Metro.Core\Caliburn.Metro.Core.csproj">
-      <Project>{3e257c20-b95a-40c5-881e-9f3d834ccb4e}</Project>
-      <Name>Caliburn.Metro.Core</Name>
+    <ProjectReference Include="..\Caliburn.Metro\Caliburn.Metro.csproj">
+      <Project>{88F9EE49-E99F-4DFD-9B7B-4C52FAD007BB}</Project>
+      <Name>Caliburn.Metro</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

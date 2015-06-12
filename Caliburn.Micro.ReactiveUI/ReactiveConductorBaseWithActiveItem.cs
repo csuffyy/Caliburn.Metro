@@ -1,4 +1,6 @@
-﻿namespace Caliburn.Micro.ReactiveUI
+﻿using Caliburn.Micro;
+
+namespace Caliburn.ReactiveUI
 {
     /// <summary>
     /// A base class for various implementations of <see cref="IConductor"/> that maintain an active item.

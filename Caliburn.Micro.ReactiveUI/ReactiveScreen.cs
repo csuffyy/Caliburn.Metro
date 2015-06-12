@@ -1,7 +1,9 @@
-﻿using ReactiveUI;
-using System;
+﻿using System;
+using Caliburn.Micro;
+using ReactiveUI;
+using IScreen = Caliburn.Micro.IScreen;
 
-namespace Caliburn.Micro.ReactiveUI
+namespace Caliburn.ReactiveUI
 {
     /// <summary>
     ///   A base implementation of <see cref = "IScreen" />.

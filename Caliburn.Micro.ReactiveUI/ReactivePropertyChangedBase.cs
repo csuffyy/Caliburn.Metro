@@ -1,13 +1,10 @@
-﻿using ReactiveUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
-using System.ComponentModel;
+using Caliburn.Micro;
+using ReactiveUI;
 
-namespace Caliburn.Micro.ReactiveUI
+namespace Caliburn.ReactiveUI
 {
     public class ReactivePropertyChangedBase : ReactiveObject, INotifyPropertyChangedEx
     {
@@ -24,7 +21,7 @@ namespace Caliburn.Micro.ReactiveUI
         /// <param name = "property">The property expression.</param>
         public virtual void NotifyOfPropertyChange<TProperty>(Expression<Func<TProperty>> property)
         {
-            NotifyOfPropertyChange(property.GetMemberInfo().Name);
+            NotifyOfPropertyChange(ExpressionExtensions.GetMemberInfo(property).Name);
         }
 
         /// <summary>

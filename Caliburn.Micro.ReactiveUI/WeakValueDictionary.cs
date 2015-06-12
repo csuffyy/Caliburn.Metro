@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Caliburn.Micro;
 
-namespace Caliburn.Micro.ReactiveUI
+namespace Caliburn.ReactiveUI
 {
 
     /// <summary>

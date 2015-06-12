@@ -50,6 +50,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Windows.Interactivity">
       <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -64,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaliburnMetroCompositionBootstrapper.cs" />
+    <Compile Include="MetroWindowManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,12 +75,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Resources\Entypo.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Caliburn.Metro.Core\Caliburn.Metro.Core.csproj">
-      <Project>{3e257c20-b95a-40c5-881e-9f3d834ccb4e}</Project>
-      <Name>Caliburn.Metro.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Entypo-license.txt" />

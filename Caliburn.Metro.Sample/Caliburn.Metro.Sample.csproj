@@ -135,10 +135,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Caliburn.Metro.Core\Caliburn.Metro.Core.csproj">
-      <Project>{3e257c20-b95a-40c5-881e-9f3d834ccb4e}</Project>
-      <Name>Caliburn.Metro.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Caliburn.Metro\Caliburn.Metro.csproj">
       <Project>{88f9ee49-e99f-4dfd-9b7b-4c52fad007bb}</Project>
       <Name>Caliburn.Metro</Name>

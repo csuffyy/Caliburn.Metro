@@ -1,13 +1,10 @@
-﻿using System.Reactive.Concurrency;
-using ReactiveUI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
+using System.Reactive.Concurrency;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+using Caliburn.Micro;
+using ReactiveUI;
 
-namespace Caliburn.Micro.ReactiveUI
+namespace Caliburn.ReactiveUI
 {
     public class ReactiveObservableCollection<T> : ReactiveList<T>, IObservableCollection<T>
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Caliburn.Micro;
 
-
-namespace Caliburn.Micro.ReactiveUI
+namespace Caliburn.ReactiveUI
 {
     ///<summary>
     ///  A base implementation of <see cref = "IViewAware" /> which is capable of caching views by context.

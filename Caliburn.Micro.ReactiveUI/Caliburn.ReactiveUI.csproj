@@ -8,8 +8,8 @@
     <ProjectGuid>{39E149C2-0DE8-4E53-B0C3-A48CCE826584}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Caliburn.Micro.ReactiveUI</RootNamespace>
-    <AssemblyName>Caliburn.Micro.ReactiveUI</AssemblyName>
+    <RootNamespace>Caliburn.ReactiveUI</RootNamespace>
+    <AssemblyName>Caliburn.ReactiveUI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>

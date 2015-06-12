@@ -4,7 +4,7 @@ using System.Windows;
 using Caliburn.Micro;
 using MahApps.Metro.Controls;
 
-namespace Caliburn.Metro.Core
+namespace Caliburn.Metro
 {
     [Export(typeof(IWindowManager))]
     public class MetroWindowManager : WindowManager

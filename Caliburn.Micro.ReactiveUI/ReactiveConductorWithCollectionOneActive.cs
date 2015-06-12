@@ -1,10 +1,11 @@
-﻿using ReactiveUI;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using Caliburn.Micro;
+using ReactiveUI;
 
-namespace Caliburn.Micro.ReactiveUI
+namespace Caliburn.ReactiveUI
 {
     public partial class ReactiveConductor<T>
     {

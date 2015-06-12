@@ -1,4 +1,3 @@
-using Caliburn.Metro.Core;
 using Caliburn.Micro;
 
 namespace Caliburn.Metro.Autofac

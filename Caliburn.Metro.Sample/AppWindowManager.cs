@@ -1,5 +1,4 @@
 using System.ComponentModel.Composition;
-using Caliburn.Metro.Core;
 using Caliburn.Micro;
 using MahApps.Metro.Controls;
 
@@ -16,9 +15,9 @@ namespace Caliburn.Metro.Sample
             }
 
             return new MainWindowContainer
-                       {
-                           Content = view
-                       };
+            {
+                Content = view
+            };
         }
     }
 }
