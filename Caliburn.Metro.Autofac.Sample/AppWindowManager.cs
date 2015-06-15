@@ -4,9 +4,9 @@ namespace Caliburn.Metro.Autofac.Sample
 {
     public class AppWindowManager : MetroWindowManager
     {
-        public override MetroWindow CreateCustomWindow(object view, bool windowIsView)
+        public override MetroWindow CreateCustomWindow(object view, bool viewIsMetroWindow)
         {
-            if (windowIsView)
+            if (viewIsMetroWindow)
             {
                 return view as MainWindowContainer;
             }

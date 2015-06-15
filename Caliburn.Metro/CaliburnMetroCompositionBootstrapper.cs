@@ -33,7 +33,11 @@ namespace Caliburn.Metro
 
         protected override object GetInstance(Type serviceType, string key)
         {
-            if (serviceType == null) throw new ArgumentNullException("serviceType");
+            if (serviceType == null)
+            {
+                throw new ArgumentNullException("serviceType");
+            }
+
             string contract = string.IsNullOrEmpty(key) ? AttributedModelServices.GetContractName(serviceType) : key;
             var exports = Container.GetExportedValues<object>(contract).ToList();
 

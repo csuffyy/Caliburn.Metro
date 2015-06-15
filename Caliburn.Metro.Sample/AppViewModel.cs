@@ -1,27 +1,24 @@
 ﻿using Caliburn.Micro;
 using System.ComponentModel.Composition;
 using System.Dynamic;
+using System.Reactive.Linq;
 using System.Windows;
+using Caliburn.ReactiveUI;
+using ReactiveUI;
 
 namespace Caliburn.Metro.Sample
 {
     [Export(typeof(AppViewModel))]
-    public class AppViewModel : PropertyChangedBase, IHaveDisplayName
+    //public class AppViewModel : PropertyChangedBase, IHaveDisplayName
+    public class AppViewModel : ReactiveScreen
     {
-        private string _displayName = "Caliburn Metro Sample";
-
-        private readonly IWindowManager _windowManager;
+        private readonly IWindowManager windowManager;
 
         [ImportingConstructor]
         public AppViewModel(IWindowManager windowManager)
         {
-            _windowManager = windowManager;
-        }
-
-        public string DisplayName
-        {
-            get { return _displayName; }
-            set { _displayName = value; }
+            DisplayName = "Caliburn Metro Sample";
+            this.windowManager = windowManager;
         }
 
         public void OpenWindow()
@@ -29,7 +26,11 @@ namespace Caliburn.Metro.Sample
             dynamic settings = new ExpandoObject();
             settings.WindowStartupLocation = WindowStartupLocation.Manual;
 
-            _windowManager.ShowWindow(new AppViewModel(_windowManager), null, settings);
+            //windowManager.ShowWindow(new AppViewModel(windowManager), null, settings);
+            //windowManager.ShowPopup(new AppViewModel(windowManager), null, settings);
+            //windowManager.ShowDialog(new AppViewModel(windowManager), null, settings);
+
+            windowManager.ShowDialog(new AppViewModel(windowManager));
         }
 
         public void OpenSettings()
@@ -37,17 +38,18 @@ namespace Caliburn.Metro.Sample
             IsSettingsFlyoutOpen = true;
         }
 
-        private bool _isSettingsFlyoutOpen;
+        private bool isSettingsFlyoutOpen;
 
         public bool IsSettingsFlyoutOpen
         {
-            get { return _isSettingsFlyoutOpen; }
-            set
-            {
-                _isSettingsFlyoutOpen = value;
-                NotifyOfPropertyChange(() => IsSettingsFlyoutOpen);
-            }
-        }
+            get { return isSettingsFlyoutOpen; }
+            set { this.RaiseAndSetIfChanged(ref isSettingsFlyoutOpen, value); }
 
+            //set
+            //{
+            //    isSettingsFlyoutOpen = value;
+            //    NotifyOfPropertyChange();
+            //}
+        }
     }
 }

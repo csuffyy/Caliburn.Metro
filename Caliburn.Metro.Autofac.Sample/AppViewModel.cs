@@ -6,26 +6,21 @@ namespace Caliburn.Metro.Autofac.Sample
 {
     public class AppViewModel : PropertyChangedBase, IHaveDisplayName
     {
-        private string _displayName = "Caliburn Metro Autofac Sample";
-
-        private readonly IWindowManager _windowManager;
+        private readonly IWindowManager windowManager;
         public AppViewModel(IWindowManager windowManager)
         {
-            _windowManager = windowManager;
+            DisplayName = "Caliburn Metro Autofac Sample";
+            this.windowManager = windowManager;
         }
 
-        public string DisplayName
-        {
-            get { return _displayName; }
-            set { _displayName = value; }
-        }
+        public string DisplayName { get; set; }
 
         public void OpenWindow()
         {
             dynamic settings = new ExpandoObject();
             settings.WindowStartupLocation = WindowStartupLocation.Manual;
 
-            _windowManager.ShowWindow(new AppViewModel(_windowManager), null, settings);
+            windowManager.ShowWindow(new AppViewModel(windowManager), null, settings);
         }
 
         public void OpenSettings()
@@ -33,17 +28,16 @@ namespace Caliburn.Metro.Autofac.Sample
             IsSettingsFlyoutOpen = true;
         }
 
-        private bool _isSettingsFlyoutOpen;
+        private bool isSettingsFlyoutOpen;
 
         public bool IsSettingsFlyoutOpen
         {
-            get { return _isSettingsFlyoutOpen; }
+            get { return isSettingsFlyoutOpen; }
             set
             {
-                _isSettingsFlyoutOpen = value;
+                isSettingsFlyoutOpen = value;
                 NotifyOfPropertyChange(() => IsSettingsFlyoutOpen);
             }
         }
-
     }
 }
