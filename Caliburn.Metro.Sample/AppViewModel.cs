@@ -2,9 +2,11 @@
 using System.ComponentModel.Composition;
 using System.Dynamic;
 using System.Reactive.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.ReactiveUI;
 using ReactiveUI;
+using ReactiveUI.Fody.Helpers;
 
 namespace Caliburn.Metro.Sample
 {
@@ -18,6 +20,8 @@ namespace Caliburn.Metro.Sample
         public AppViewModel(IWindowManager windowManager)
         {
             DisplayName = "Caliburn Metro Sample";
+            Name = "Hello";
+
             this.windowManager = windowManager;
         }
 
@@ -33,23 +37,18 @@ namespace Caliburn.Metro.Sample
             windowManager.ShowDialog(new AppViewModel(windowManager));
         }
 
-        public void OpenSettings()
+        public async Task OpenSettings()
         {
+            await Task.Delay(20);
+
             IsSettingsFlyoutOpen = true;
+            Name = "lzy";
         }
 
-        private bool isSettingsFlyoutOpen;
+        [Reactive]
+        public bool IsSettingsFlyoutOpen { get; set; }
 
-        public bool IsSettingsFlyoutOpen
-        {
-            get { return isSettingsFlyoutOpen; }
-            set { this.RaiseAndSetIfChanged(ref isSettingsFlyoutOpen, value); }
-
-            //set
-            //{
-            //    isSettingsFlyoutOpen = value;
-            //    NotifyOfPropertyChange();
-            //}
-        }
+        [Reactive]
+        public string Name { get; set; }
     }
 }

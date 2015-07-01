@@ -159,10 +159,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Caliburn.Metro.Autofac\Caliburn.Metro.Autofac.csproj">
-      <Project>{a78dcccf-01cd-48ce-8e85-ce262aa7e98f}</Project>
-      <Name>Caliburn.Metro.Autofac</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Caliburn.Metro\Caliburn.Metro.csproj">
       <Project>{88F9EE49-E99F-4DFD-9B7B-4C52FAD007BB}</Project>
       <Name>Caliburn.Metro</Name>

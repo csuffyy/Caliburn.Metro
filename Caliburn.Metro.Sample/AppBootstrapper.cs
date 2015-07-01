@@ -1,6 +1,6 @@
 ﻿namespace Caliburn.Metro.Sample
 {
-    public class AppBootstrapper : CaliburnMetroCompositionBootstrapper<AppViewModel>
+    public class AppBootstrapper : CaliburnMetroMefBootstrapper<AppViewModel>
     {
 
     }

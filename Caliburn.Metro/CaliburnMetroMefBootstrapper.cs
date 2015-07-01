@@ -9,11 +9,11 @@ using Caliburn.Micro;
 
 namespace Caliburn.Metro
 {
-    public class CaliburnMetroCompositionBootstrapper<TRootViewModel> : BootstrapperBase
+    public class CaliburnMetroMefBootstrapper<TRootViewModel> : BootstrapperBase
     {
         protected CompositionContainer Container { get; private set; }
 
-        public CaliburnMetroCompositionBootstrapper()
+        public CaliburnMetroMefBootstrapper()
         {
             Initialize();
         }
