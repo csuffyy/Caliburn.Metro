@@ -13,6 +13,8 @@ namespace Caliburn.Metro.Autofac.Sample
             builder.RegisterAssemblyTypes(assembly)
                 .Where(item => item.Name.EndsWith("ViewModel") && item.IsAbstract == false)
                 .AsSelf()
+                //.WithProperty("WindowManager", Container.Resolve<IWindowManager>())
+                .PropertiesAutowired()
                 .SingleInstance();
         }
     }

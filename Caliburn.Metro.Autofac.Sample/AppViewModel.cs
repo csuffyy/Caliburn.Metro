@@ -1,26 +1,29 @@
 ﻿using Caliburn.Micro;
 using System.Dynamic;
 using System.Windows;
+using Caliburn.ReactiveUI;
+using ReactiveUI;
 
 namespace Caliburn.Metro.Autofac.Sample
 {
-    public class AppViewModel : PropertyChangedBase, IHaveDisplayName
+    public class AppViewModel : ReactiveScreen
     {
-        private readonly IWindowManager windowManager;
-        public AppViewModel(IWindowManager windowManager)
+        public AppViewModel()
         {
             DisplayName = "Caliburn Metro Autofac Sample";
-            this.windowManager = windowManager;
         }
 
-        public string DisplayName { get; set; }
+        /// <summary>
+        /// 通过属性注入的方式获取实例
+        /// </summary>
+        public IWindowManager WindowManager { get; set; }
 
         public void OpenWindow()
         {
             dynamic settings = new ExpandoObject();
             settings.WindowStartupLocation = WindowStartupLocation.Manual;
 
-            windowManager.ShowWindow(new AppViewModel(windowManager), null, settings);
+            WindowManager.ShowDialog(new AppViewModel(), null, settings);
         }
 
         public void OpenSettings()
@@ -33,11 +36,7 @@ namespace Caliburn.Metro.Autofac.Sample
         public bool IsSettingsFlyoutOpen
         {
             get { return isSettingsFlyoutOpen; }
-            set
-            {
-                isSettingsFlyoutOpen = value;
-                NotifyOfPropertyChange(() => IsSettingsFlyoutOpen);
-            }
+            set { this.RaiseAndSetIfChanged(ref isSettingsFlyoutOpen, value); }
         }
     }
 }
