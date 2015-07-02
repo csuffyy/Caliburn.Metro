@@ -9,14 +9,9 @@ using Caliburn.Micro;
 
 namespace Caliburn.Metro
 {
-    public class CaliburnMetroMefBootstrapper<TRootViewModel> : BootstrapperBase
+    public class CaliburnMetroMefBootstrapper<TRootViewModel> : CaliburnBootstrapper<TRootViewModel>
     {
         protected CompositionContainer Container { get; private set; }
-
-        public CaliburnMetroMefBootstrapper()
-        {
-            Initialize();
-        }
 
         protected override void Configure()
         {
@@ -65,11 +60,6 @@ namespace Caliburn.Metro
 
         protected virtual void ConfigureContainer(CompositionBatch builder)
         {
-        }
-
-        protected override void OnStartup(object sender, StartupEventArgs e)
-        {
-            DisplayRootViewFor<TRootViewModel>();
         }
     }
 }

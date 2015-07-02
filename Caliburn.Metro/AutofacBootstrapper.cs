@@ -7,7 +7,7 @@ using Caliburn.Micro;
 
 namespace Caliburn.Metro
 {
-    public class AutofacBootstrapper<TRootViewModel> : BootstrapperBase
+    public class AutofacBootstrapper<TRootViewModel> : CaliburnBootstrapper<TRootViewModel>
     {
         #region Properties
 
@@ -43,11 +43,6 @@ namespace Caliburn.Metro
         public Func<IEventAggregator> CreateEventAggregator { get; set; }
 
         #endregion
-
-        public AutofacBootstrapper()
-        {
-            Initialize();
-        }
 
         /// <summary>
         /// Do not override this method. This is where the IoC container is configured.
@@ -194,11 +189,6 @@ namespace Caliburn.Metro
         /// <param name="builder">The Autofac configuration builder.</param>
         protected virtual void ConfigureContainer(ContainerBuilder builder)
         {
-        }
-
-        protected override void OnStartup(object sender, StartupEventArgs e)
-        {
-            DisplayRootViewFor<TRootViewModel>();
         }
     }
 }
