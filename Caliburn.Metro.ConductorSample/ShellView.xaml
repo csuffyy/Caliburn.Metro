@@ -1,6 +1,7 @@
-﻿<Window x:Class="Caliburn.Metro.ConductorSample.ShellView"
+﻿<controls:MetroWindow x:Class="Caliburn.Metro.ConductorSample.ShellView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:cal="http://www.caliburnproject.org"
         Width="640"
         Height="480">
@@ -13,11 +14,11 @@
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding DisplayName}" />
-                        <Button Content="X"
-                                cal:Message.Attach="DeactivateItem($dataContext, 'true')" />
+                        <Button Content="X" cal:Message.Attach="DeactivateItem($dataContext, 'true')" />
+                        <!--<Button Content="X" cal:Message.Attach="ActivateItem($dataContext)" />-->
                     </StackPanel>
                 </DataTemplate>
             </TabControl.ItemTemplate>
         </TabControl>
     </DockPanel>
-</Window>
+</controls:MetroWindow>

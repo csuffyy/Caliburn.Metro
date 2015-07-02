@@ -7,6 +7,15 @@ namespace Caliburn.Metro.ConductorSample
     {
         int count = 1;
 
+        private readonly TabViewModel item = new TabViewModel { DisplayName = "Tab 0 " };
+
+        public ShellViewModel()
+        {
+            DisplayName = "ReactiveConductor Demo";
+
+            ActivateItem(item);
+        }
+
         public void OpenTab()
         {
             ActivateItem(new TabViewModel
