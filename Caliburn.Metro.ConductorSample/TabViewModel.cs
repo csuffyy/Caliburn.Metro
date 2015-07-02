@@ -1,5 +1,4 @@
-﻿using Caliburn.Micro;
-using Caliburn.ReactiveUI;
+﻿using Caliburn.ReactiveUI;
 
 namespace Caliburn.Metro.ConductorSample
 {

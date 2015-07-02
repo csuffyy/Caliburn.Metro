@@ -159,18 +159,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Caliburn.Metro\Caliburn.Metro.csproj">
-      <Project>{88F9EE49-E99F-4DFD-9B7B-4C52FAD007BB}</Project>
-      <Name>Caliburn.Metro</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Caliburn.ReactiveUI\Caliburn.ReactiveUI.csproj">
-      <Project>{39E149C2-0DE8-4E53-B0C3-A48CCE826584}</Project>
-      <Name>Caliburn.ReactiveUI</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\Entypo-license.txt" />
     <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Caliburn.ReactiveUI.Metro\Caliburn.ReactiveUI.Metro.csproj">
+      <Project>{f689571f-6061-4f12-9b1f-ed832b508e98}</Project>
+      <Name>Caliburn.ReactiveUI.Metro</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

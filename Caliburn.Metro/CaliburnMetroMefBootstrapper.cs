@@ -4,10 +4,9 @@ using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
 using System.ComponentModel.Composition.Primitives;
 using System.Linq;
-using System.Windows;
 using Caliburn.Micro;
 
-namespace Caliburn.Metro
+namespace Caliburn.ReactiveUI.Metro
 {
     public class CaliburnMetroMefBootstrapper<TRootViewModel> : CaliburnBootstrapper<TRootViewModel>
     {

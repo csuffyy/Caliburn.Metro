@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows;
 using Autofac;
 using Caliburn.Micro;
 
-namespace Caliburn.Metro
+namespace Caliburn.ReactiveUI.Metro
 {
     public class AutofacBootstrapper<TRootViewModel> : CaliburnBootstrapper<TRootViewModel>
     {

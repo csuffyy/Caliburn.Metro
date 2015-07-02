@@ -2,7 +2,7 @@
 using Autofac.Core;
 using Caliburn.Micro;
 
-namespace Caliburn.Metro
+namespace Caliburn.ReactiveUI.Metro
 {
     public class EventAggregationAutoSubscriptionModule : Module
     {

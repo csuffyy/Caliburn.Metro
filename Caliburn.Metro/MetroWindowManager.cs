@@ -4,7 +4,7 @@ using System.Windows;
 using Caliburn.Micro;
 using MahApps.Metro.Controls;
 
-namespace Caliburn.Metro
+namespace Caliburn.ReactiveUI.Metro
 {
     /// <summary>
     /// 窗口管理类
@@ -25,6 +25,7 @@ namespace Caliburn.Metro
         {
             MetroWindow window = null;
             Window inferOwnerOf;
+
             if (view is MetroWindow)
             {
                 window = CreateCustomWindow(view, true);
@@ -117,8 +118,7 @@ namespace Caliburn.Metro
                 new ResourceDictionary
                 {
                     Source =
-                        new Uri(
-                            "pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml",
+                        new Uri("pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml",
                             UriKind.RelativeOrAbsolute)
                 },
                 new ResourceDictionary
@@ -151,7 +151,7 @@ namespace Caliburn.Metro
                 },
                 new ResourceDictionary
                 {
-                    Source = 
+                    Source =
                         new Uri(
                             "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml",
                             UriKind.RelativeOrAbsolute)

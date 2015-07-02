@@ -2,17 +2,14 @@
 using Caliburn.Micro;
 using System.ComponentModel.Composition;
 using System.Dynamic;
-using System.Reactive.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.ReactiveUI;
-using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 
 namespace Caliburn.Metro.Sample
 {
     [Export(typeof(AppViewModel))]
-    //public class AppViewModel : PropertyChangedBase, IHaveDisplayName
     public class AppViewModel : ReactiveScreen
     {
         private readonly IWindowManager windowManager;

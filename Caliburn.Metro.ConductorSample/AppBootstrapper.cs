@@ -1,7 +1,4 @@
-﻿using System.Reflection;
-using System.Windows;
-using Autofac;
-using Caliburn.Micro;
+﻿using Caliburn.ReactiveUI.Metro;
 
 namespace Caliburn.Metro.ConductorSample
 {

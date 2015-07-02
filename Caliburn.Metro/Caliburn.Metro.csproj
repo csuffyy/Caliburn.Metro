@@ -7,7 +7,7 @@
     <ProjectGuid>{88F9EE49-E99F-4DFD-9B7B-4C52FAD007BB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Caliburn.Metro</RootNamespace>
+    <RootNamespace>Caliburn.ReactiveUI.Metro</RootNamespace>
     <AssemblyName>Caliburn.Metro</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

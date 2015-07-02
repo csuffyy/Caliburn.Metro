@@ -1,6 +1,6 @@
 using Caliburn.Micro;
 
-namespace Caliburn.Metro
+namespace Caliburn.ReactiveUI.Metro
 {
     public class CaliburnMetroAutofacBootstrapper<TRootModel> : AutofacBootstrapper<TRootModel>
     {

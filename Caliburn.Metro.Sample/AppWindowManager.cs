@@ -1,5 +1,6 @@
 using System.ComponentModel.Composition;
 using Caliburn.Micro;
+using Caliburn.ReactiveUI.Metro;
 using MahApps.Metro.Controls;
 
 namespace Caliburn.Metro.Sample

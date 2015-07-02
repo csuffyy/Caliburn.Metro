@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Caliburn.Micro;
+using Caliburn.ReactiveUI.Metro;
 
 namespace Caliburn.Metro.Autofac.Sample
 {

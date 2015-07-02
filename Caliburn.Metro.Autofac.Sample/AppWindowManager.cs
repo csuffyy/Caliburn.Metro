@@ -1,3 +1,4 @@
+using Caliburn.ReactiveUI.Metro;
 using MahApps.Metro.Controls;
 
 namespace Caliburn.Metro.Autofac.Sample
