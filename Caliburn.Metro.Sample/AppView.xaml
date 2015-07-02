@@ -4,6 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006">
   <StackPanel Background="LightBlue">
         <TextBlock Name="Name" Margin="10"></TextBlock>
-    <Button Name="OpenWindow" Content="Open Window"  />
+        <Button Name="OpenWindow" Content="Open Window"  />
   </StackPanel>
 </UserControl>
